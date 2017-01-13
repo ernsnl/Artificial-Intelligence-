@@ -94,10 +94,6 @@ class Board:
             #sys.stderr.write("Testing " + str(t_row) + ", " + str(t_col) + "\n")
             if(self.in_bounds(t_row, t_col)):
                 #sys.stderr.write("legal\n")
-                if str(S_BUG) in self.cell[t_row][t_col] and my_player.has_weapon:
-                    result.append(((o_row, o_col), order))
-                if str(1-my_id) in self.cell[t_row][t_col] and my_player.has_weapon and not other_player.has_weapon:
-                    result.append(((o_row, o_col), order))
                 if (not str(S_BLOCKED) in self.cell[t_row][t_col]):
                     result.append(((o_row, o_col), order))
                 ## TO DO: More sophisticated behaivor can be implemented
