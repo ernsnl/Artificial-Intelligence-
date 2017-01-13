@@ -119,10 +119,10 @@ class Board:
                     goal_point = wep
                     goal_man_dis = temp_dis
 
-            enemy_dis = self.calculate_man_distance(1 - my_id, goal_point)
+            """enemy_dis = self.calculate_man_distance(1 - my_id, goal_point)
             if(enemy_dis < goal_man_dis):
                 self.weapons.remove(goal_point)
-                goal_point = self.find_closest(my_id)
+                goal_point = self.find_closest(my_id)"""
             self.goal = goal_point
             return goal_point
 
@@ -135,10 +135,10 @@ class Board:
                     goal_point = snip
                     goal_man_dis = temp_dis
 
-            enemy_dis = self.calculate_man_distance(1 - my_id, goal_point)
+            """enemy_dis = self.calculate_man_distance(1 - my_id, goal_point)
             if(enemy_dis < goal_man_dis):
                 self.snippets.remove(goal_point)
-                goal_point = self.find_closest(my_id)
+                goal_point = self.find_closest(my_id)"""
             self.goal = goal_point
             return goal_point
 
