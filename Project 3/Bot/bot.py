@@ -20,12 +20,7 @@ class Bot:
         p = problem.Problem(self.game.field, self.game.my_botid)
         if(p.goal):
             solution = _a.astar_search(p, heuristic).solution()
-            print("Euraka")
-        
-        legal = self.game.field.legal_moves(self.game.my_botid)
-        #self.game.field.output()
-        if len(legal) == 0:
-            self.game.issue_order_pass()
+            self.game.issue_order(solution[0][1])
         else:
-            (_, chosen) = random.choice(legal)
-            self.game.issue_order(chosen)
+            self.game.issue_order_pass()
+        
